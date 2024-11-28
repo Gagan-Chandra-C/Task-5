@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class GiftForStudents {
+    public static void main(String[] args) {
+        // List of student names 
+        List<String> students = new ArrayList<>();
+        students.add("Alice");
+        students.add("Bob");
+        students.add("Andrew");
+        students.add("Charlie");
+        students.add("Anna");
+        students.add("David");
+        students.add("Alex");
+        students.add("Eva");
+        students.add("Adam");
+        students.add("Sophia");
+
+        // Filter students whose names start with "A" 
+        List<String> specialStudents = students.stream()
+                .filter(name -> name.startsWith("A"))
+                .collect(Collectors.toList());
+
+        // Print the list of students eligible for gifts 
+        System.out.println("Students receiving special gifts: " + specialStudents);
+    }
+}
